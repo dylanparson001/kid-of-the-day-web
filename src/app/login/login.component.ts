@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {loginDto} from "../models/loginDto";
+import {AuthService} from "../_services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -13,10 +15,20 @@ export class LoginComponent {
     password: ''
   }
 
+  constructor(private loginService: AuthService, private router: Router) {
+  }
 
   login() {
-    alert('what up')
-    console.log('got here')
-    console.log(this.loginModel)
+    if (this.loginModel.username != "" && this.loginModel.password != "") {
+
+      this.loginService.login(this.loginModel).subscribe({
+        next: () => {
+          let jwt = localStorage.getItem('token')
+          if (jwt) {
+            this.router.navigateByUrl('/home')
+          }
+        }
+      })
+    }
   }
 }

@@ -1,0 +1,12 @@
+<nav>
+  <div class="upper-nav">
+    <button class="hamburger" (click)="showSideNav()">&#9776;</button>
+    <span class="title">{{ title | uppercase }}</span>
+  </div>
+
+  <div [ngClass]="isSideNavActive()">
+
+    <div [ngClass]="isSideNavActiveItems()">Account</div>
+    <div [ngClass]="isSideNavActiveItems()" (click)="logout()">Logout</div>
+  </div>
+</nav>

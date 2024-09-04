@@ -1,6 +1,6 @@
 .login-container{
   margin: 10% auto;
-  width: 40vw;
+  width: 85vw;
   /*display: flex;*/
   /*flex-direction: column;*/
   /*justify-items: flex-end;*/
@@ -10,7 +10,7 @@
 }
 .login-form-container{
   display: flex;
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   padding: 2em;
   flex-direction: column;
@@ -22,4 +22,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+input {
+  width: 65vw;
+}
+
+button {
+  /*width: 25%;*/
+  font-size: 0.9rem;
 }
