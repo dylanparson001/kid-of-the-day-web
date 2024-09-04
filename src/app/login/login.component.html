@@ -1,0 +1,23 @@
+<div class="login-container">
+
+  <form
+    #loginForm="ngForm"
+    class="login-form-container"
+  >
+    <h2 style="margin: 0 auto;">Kid Of The Day!</h2>
+<!--    <h3 style="margin: 0 auto;">Login</h3>-->
+
+    <p>Username</p>
+    <input name="username" [(ngModel)]="loginModel.username" type="text">
+
+    <p>Password</p>
+    <input name="password" [(ngModel)]="loginModel.password" type="password">
+
+    <div style="margin-top: 5%;" class="login-buttons">
+
+    <button  class="primary-button" (click)="login()">Login</button>
+    <button class="secondary-button" >Register</button>
+    </div>
+
+  </form>
+</div>
