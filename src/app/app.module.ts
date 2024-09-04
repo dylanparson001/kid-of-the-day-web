@@ -11,6 +11,7 @@ import { NewKidComponent } from './kidprofiles/new-kid/new-kid.component';
 import { KidListComponent } from './kidprofiles/kid-list/kid-list.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { NavItemComponent } from './nav/nav-item/nav-item.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NavItemComponent } from './nav/nav-item/nav-item.component';
     KidListComponent,
     NavbarComponent,
     NavItemComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
